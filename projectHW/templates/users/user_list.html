@@ -10,8 +10,9 @@
     <ul>
         {% for user in users %}
         <li>
-            <a href="{% url 'user_dateil' product.pk %}">{{ user.name, user.last_name }}</a>
-            - years{{user.age}}
+            <a href="{% url 'user_detail' user.pk %}">{{ user.name }} {{ user.last_name}}</a>
+            - years {{user.age}}
+            <br>
             {% if user.is_admin %}
             (is admin)
             {%else%}
